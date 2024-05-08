@@ -1,19 +1,4 @@
-# buttontask
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
  <img src="https://github.com/sumitpatil21/DaytoTask/assets/148967002/fbd915e8-17ef-415c-bd08-9d25814dc75e" alt="" height="20%" width="20%" >
  <h2>1. What is  Asynchronous Programming?</h2>
@@ -31,6 +16,6 @@ samples, guidance on mobile development, and a full API reference.
  <h2>7.What is Timer.periodic and use with Example?</h2>
  <h3>Periodic timers stay alive until they are manually canceled. Flutter has a different factory method, named periodic , to create such a timer. A good example of a periodic timer is displaying the remaining time for a time-sensitive operation, like completing a payment within 10 minutes. </h3>
   <img src="https://github.com/sumitpatil21/DaytoTask/assets/148967002/44d0a163-9976-4d2e-b4ae-1d75371a3af7" alt="" height="20%" width="20%" >
-
+<img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/99c1ad6a-275d-439d-9a8a-5d54e7a775c2"height="20%" width="20%">
 
 
