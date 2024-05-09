@@ -1,4 +1,5 @@
 import 'package:daytodaytask/GmailPage.dart';
+import 'package:daytodaytask/LoginPage/WelcomePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GmailPage(),
+      home: WelcomePage()
     );
   }
 }
