@@ -96,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(fontSize: 20),
                 decoration: InputDecoration(
                   suffixIcon: Padding(
-                    padding: const EdgeInsets.all(28.0),
+                    padding: const EdgeInsets.all(28),
                     child: Icon(Icons.remove_red_eye,size: 30,),
                   ),
                   prefixIcon: Icon(

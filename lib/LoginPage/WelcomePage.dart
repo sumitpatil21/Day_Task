@@ -39,7 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 child: Container(
                   margin: EdgeInsets.only(top: 40,left: 20),
                   height: 75,
-                  width: 195,
+                  width: 194,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
