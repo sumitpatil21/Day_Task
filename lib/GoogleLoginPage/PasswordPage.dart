@@ -1,17 +1,19 @@
-import 'package:daytodaytask/GoogleLoginPage/PasswordPage.dart';
 import 'package:daytodaytask/GoogleLoginPage/globle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+import 'LoginPage.dart';
+
+class PasswordPage extends StatefulWidget {
+  const PasswordPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<PasswordPage> createState() => _PasswordPageState();
 }
-GlobalKey<FormState> fromkey =GlobalKey();
-TextEditingController texEmail=TextEditingController();
-class _LoginPageState extends State<LoginPage> {
+TextEditingController texpass=TextEditingController();
+
+
+class _PasswordPageState extends State<PasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,13 +73,13 @@ class _LoginPageState extends State<LoginPage> {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    SizedBox(width: 225,height: 40,),
+                                    SizedBox(width: 225,),
                                     Text(
-                                      "Forget email?",
+                                      "Forget password?",
                                       style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w800,
-                                        color: Colors.blue.shade600
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w800,
+                                          color: Colors.blue.shade600
                                       ),
                                     ),
                                   ],
@@ -85,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                                 Row(
                                   children: [
 
-                                    SizedBox(width: 395,height: 50,),
+                                    SizedBox(width: 395,height: 70,),
                                     Text(
                                       "Not your Computer? Use Guest mode to sign in privately.",
                                       style: TextStyle(
@@ -116,28 +118,24 @@ class _LoginPageState extends State<LoginPage> {
                                         color: Colors.blue,
                                       ),
                                     ),
-                                SizedBox(width: 15,),
-                                InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      bool rep=fromkey.currentState!.validate();
-                                      if(rep)
-                                        {
-                                          email=texEmail.text;
-                                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => PasswordPage(),));
-                                        }
-                                    });
-                                  },
-                                  child: Container(
-                                    height: 35,
-                                    width: 80,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue,
-                                      borderRadius: BorderRadius.circular(25),
-                                    ),
-                                    child: Center(child: Text("Next",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w500),)),
-                                  ),
-                                )
+                                    SizedBox(width: 15,),
+                                    InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          bool rep1=fromkey.currentState!.validate();
+
+                                        });
+                                      },
+                                      child: Container(
+                                        height: 35,
+                                        width: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue,
+                                          borderRadius: BorderRadius.circular(25),
+                                        ),
+                                        child: Center(child: Text("Next",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w500),)),
+                                      ),
+                                    )
                                   ],
                                 ),
                               ],
@@ -148,37 +146,28 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-                 Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 800,right: 400,top: 75),
                   child: TextFormField(
                     style: TextStyle(
-                      height: 1
+                        height: 1
                     ),
                     validator: (value)
-
                     {
-                      if(value!.isEmpty)
-                        {
-                          return 'pjjs';
-                        }
-                       if(!value.contains('@gmail.com'))
-                         {
-                           return "Must be Enter @gmail.com";
-                         }
-                       if(value!.toString()=="@gmail.com")
-                         {
-                           return "Must be Enter @gmail.com";
-                         }
+                      if(value!.length>8&&value!.length<32)
+                      {
+                        return "getter then 8 and less then 32";
+                      }
                     },
-                    controller: texEmail,
+                    controller: texpass,
                     decoration: InputDecoration(
-                      hintText: "Exmple123@gmail.com",
-                      hintStyle: TextStyle(fontSize: 10,color: Colors.black,letterSpacing: 1),
-                      labelText: "Email or phone",
+                        hintText: "Exmple123",
+                        hintStyle: TextStyle(fontSize: 10,color: Colors.black,letterSpacing: 1),
+                        labelText: "Password",
                         labelStyle: TextStyle(fontSize: 12,color: Colors.black),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(
-                                width: 5,
+                              width: 5,
                               color: Colors.black,
                             )
                         )
