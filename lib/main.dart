@@ -1,4 +1,5 @@
 
+import 'package:daytodaytask/GoogleLoginPage/LoginPage.dart';
 import 'package:daytodaytask/LoginPage/WelcomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomePage()
+      home:LoginPage(),
     );
   }
 }
