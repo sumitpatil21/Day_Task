@@ -17,5 +17,6 @@
  <h3>Periodic timers stay alive until they are manually canceled. Flutter has a different factory method, named periodic , to create such a timer. A good example of a periodic timer is displaying the remaining time for a time-sensitive operation, like completing a payment within 10 minutes. </h3>
   <img src="https://github.com/sumitpatil21/DaytoTask/assets/148967002/44d0a163-9976-4d2e-b4ae-1d75371a3af7" alt="" height="20%" width="20%" >
 <img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/99c1ad6a-275d-439d-9a8a-5d54e7a775c2"height="20%" width="20%">
-
+<img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/2a67e48e-26ec-4234-9ea2-6ba9d0f91bab"height="20%" width="20%">
+<img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/d7476736-0d1a-4e20-93c0-1e6cd70a52e7"height="20%" width="20%">
 
