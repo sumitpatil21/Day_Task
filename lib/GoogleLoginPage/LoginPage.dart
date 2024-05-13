@@ -159,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
                     {
                       if(value!.isEmpty)
                         {
-                          return 'pjjs';
+                          return 'Enter A input';
                         }
                        if(!value.contains('@gmail.com'))
                          {

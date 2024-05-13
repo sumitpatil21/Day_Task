@@ -1,8 +1,9 @@
-import 'package:daytodaytask/GoogleLoginPage/globle.dart';
+import 'package:daytodaytask/GoogleLoginPage/SuccessPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'LoginPage.dart';
+import 'globle.dart';
 
 class PasswordPage extends StatefulWidget {
   const PasswordPage({super.key});
@@ -19,7 +20,6 @@ class _PasswordPageState extends State<PasswordPage> {
     return Scaffold(
       backgroundColor: Colors.black12,
       body: Form(
-        key: fromkey,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -73,7 +73,7 @@ class _PasswordPageState extends State<PasswordPage> {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    SizedBox(width: 225,),
+                                    SizedBox(width: 225,height: 40,),
                                     Text(
                                       "Forget password?",
                                       style: TextStyle(
@@ -87,7 +87,7 @@ class _PasswordPageState extends State<PasswordPage> {
                                 Row(
                                   children: [
 
-                                    SizedBox(width: 395,height: 70,),
+                                    SizedBox(width: 395,height: 50,),
                                     Text(
                                       "Not your Computer? Use Guest mode to sign in privately.",
                                       style: TextStyle(
@@ -122,8 +122,12 @@ class _PasswordPageState extends State<PasswordPage> {
                                     InkWell(
                                       onTap: () {
                                         setState(() {
-                                          bool rep1=fromkey.currentState!.validate();
-
+                                          bool rep=fromkey.currentState!.validate();
+                                          if(rep)
+                                          {
+                                            email=texpass.text;
+                                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => successpage(),));
+                                          }
                                         });
                                       },
                                       child: Container(
@@ -133,7 +137,7 @@ class _PasswordPageState extends State<PasswordPage> {
                                           color: Colors.blue,
                                           borderRadius: BorderRadius.circular(25),
                                         ),
-                                        child: Center(child: Text("Next",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w500),)),
+                                        child: Center(child: Text("submit",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w500),)),
                                       ),
                                     )
                                   ],
@@ -153,15 +157,25 @@ class _PasswordPageState extends State<PasswordPage> {
                         height: 1
                     ),
                     validator: (value)
+
                     {
-                      if(value!.length>8&&value!.length<32)
+                      if(value!.isEmpty)
                       {
-                        return "getter then 8 and less then 32";
+                        return 'Enter A input';
+                      }
+                      if(!value.contains('@gmail.com'))
+                      {
+                        return "Must be Enter @gmail.com";
+                      }
+                      if(value!.toString()=="@gmail.com")
+                      {
+                        return "Must be Enter @gmail"
+                            ".com";
                       }
                     },
                     controller: texpass,
                     decoration: InputDecoration(
-                        hintText: "Exmple123",
+                        hintText: "Sumit124",
                         hintStyle: TextStyle(fontSize: 10,color: Colors.black,letterSpacing: 1),
                         labelText: "Password",
                         labelStyle: TextStyle(fontSize: 12,color: Colors.black),
