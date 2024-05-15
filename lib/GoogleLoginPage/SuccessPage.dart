@@ -52,7 +52,7 @@ class _successpageState extends State<successpage> {
                                     Text(
                                       "Successfully login",
                                       style: TextStyle(
-                                        fontSize: 35,
+                                        fontSize: 25,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),

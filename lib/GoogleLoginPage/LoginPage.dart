@@ -125,6 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                                         {
                                           email=texEmail.text;
                                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => PasswordPage(),));
+                                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Email is right")));
                                         }
                                     });
                                   },

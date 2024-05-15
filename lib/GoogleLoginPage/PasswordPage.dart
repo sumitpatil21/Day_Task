@@ -126,7 +126,8 @@ class _PasswordPageState extends State<PasswordPage> {
                                           if(rep)
                                           {
                                             email=texpass.text;
-                                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => successpage(),));
+                                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => successpage  (),));
+                                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Successfully!")));
                                           }
                                         });
                                       },
@@ -157,20 +158,14 @@ class _PasswordPageState extends State<PasswordPage> {
                         height: 1
                     ),
                     validator: (value)
-
                     {
                       if(value!.isEmpty)
                       {
                         return 'Enter A input';
                       }
-                      if(!value.contains('@gmail.com'))
+                      if(value.length>8&&value.length<32)
                       {
                         return "Must be Enter @gmail.com";
-                      }
-                      if(value!.toString()=="@gmail.com")
-                      {
-                        return "Must be Enter @gmail"
-                            ".com";
                       }
                     },
                     controller: texpass,
