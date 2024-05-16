@@ -1,7 +1,6 @@
-
-import 'package:daytodaytask/GoogleLoginPage/LoginPage.dart';
-import 'package:daytodaytask/LoginPage/WelcomePage.dart';
 import 'package:flutter/material.dart';
+
+import 'Image_Picker/ImagePickerPage.dart';
 
 void main() {
   runApp(const DayToTask());
@@ -13,7 +12,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:LoginPage(),
+      home:ImagePicker(),
     );
   }
 }
