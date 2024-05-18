@@ -1,5 +1,7 @@
+import 'package:daytodaytask/RegisterPage/registerPage.dart';
 import 'package:flutter/material.dart';
 
+import 'Dynamic_Text_Firld/DynamicTextFiled.dart';
 import 'Image_Picker/ImagePickerPage.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:ImagePicker(),
+      home:DynaimcTextField(),
     );
   }
 }
