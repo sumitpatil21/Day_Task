@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:daytodaytask/RegisterPage/ID_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
@@ -14,6 +15,7 @@ TextEditingController txtadd=TextEditingController();
 TextEditingController txtnum=TextEditingController();
 TextEditingController txtemail=TextEditingController();
 TextEditingController txtdate=TextEditingController();
+
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -76,6 +78,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
+                controller: txtfirst,
                 decoration: InputDecoration(
                   labelText: "First Name",
                   labelStyle: TextStyle(
@@ -103,6 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
+                controller: txtlast,
                 decoration: InputDecoration(
                   labelText: "Last Name",
                   labelStyle: TextStyle(
@@ -130,6 +134,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
+                controller: txtadd,
                 decoration: InputDecoration(
                   labelText: "Address",
                   labelStyle: TextStyle(
@@ -158,6 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
                 keyboardType: TextInputType.phone,
+                controller: txtnum,
                 decoration: InputDecoration(
                   labelText: "Number",
                   labelStyle: TextStyle(
@@ -184,6 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
+                controller: txtemail,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: "Email Addresss",
@@ -211,6 +218,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
               child: TextField(
+                controller: txtdate,
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                     labelText: "Birth Of Date",
@@ -285,18 +293,39 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     ...List.generate(checkBox.length, (index) => Checkbox(value: ch, onChanged:(value) {
                       setState(() {
-                        if(checkBox[index])
-                          {
-                            ch=value!;
-                          }
+
                       });
                     },),
                     )
                   ],
                 ),
               ),
-            )
-        
+            ),
+         InkWell(
+           onTap: () {
+             setState(() {
+               Navigator.of(context).push(MaterialPageRoute(builder: (context) => IdPage(),));
+               fname=txtfirst.text;
+               lname=txtlast.text;
+               email=txtemail.text;
+               date=txtdate.text;
+               add=txtadd.text;
+               num=txtnum.text;
+             });
+           },
+           child: Container(
+             margin: EdgeInsets.all(15),
+             height: 70,
+             width: 200,
+             decoration: BoxDecoration(
+               color: Colors.blue,
+               borderRadius: BorderRadius.circular(15),
+             ),
+             child: Center(
+               child: Text("Submit",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 20),),
+             ),
+           ),
+         )
           ],
         ),
       ) ,
@@ -310,3 +339,10 @@ List checkBox=[
   "Challenge yourself",
   "Stay updated"
 ];
+
+String fname="";
+String lname="";
+String email="";
+String date="";
+String add="";
+String num="";

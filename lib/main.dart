@@ -14,7 +14,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:DynaimcTextField(),
+      home:RegisterPage(),
     );
   }
 }
