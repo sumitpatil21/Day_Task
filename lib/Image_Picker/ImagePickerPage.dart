@@ -89,7 +89,13 @@ class _ImgPickerState extends State<ImgPicker> {
           )
         ],
       ),
-    );;
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+        },
+
+      ),
+    );
   }
 }
 

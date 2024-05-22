@@ -1,12 +1,10 @@
 import 'dart:typed_data';
-
 import 'package:daytodaytask/Invoice_Generator/Pdf.dart';
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-
 
 class InvoicePage extends StatefulWidget {
   const InvoicePage({super.key});
@@ -42,7 +40,9 @@ class _InvoicePageState extends State<InvoicePage> {
         ),
         IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => PdfPageScreen(),));
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => PdfPageScreen(),
+              ));
             },
             icon: Icon(
               Icons.picture_as_pdf,
@@ -68,42 +68,41 @@ class invoiceModel {
 }
 
 Future<Uint8List> generatePdf() {
-  final pdf=pw.Document();
-  pdf.addPage(
-    pw.Page(
-      build: (context) => pw.Column(
-        children: [
-          pw.Container(
-
-            height: 100,
-            width: double.infinity,
-            decoration: pw.BoxDecoration(
-               color: PdfColors.blue,
-            ),
-            child: pw.Row(
-              children: [
-                ...List.generate(invoiceList.length, (index) => pw.Row(
-                 children: [
-                    pw.Text(
-                    invoiceList[index].name,
-                    style: pw.TextStyle(fontSize: 20,),),
-                   pw.Text(
-                     invoiceList[index].price,
-                     style: pw.TextStyle(fontSize: 20,),),
-                   pw.Text(
-                     invoiceList[index].brand,
-                     style: pw.TextStyle(fontSize: 20,),)
-                 ]
+  final pdf = pw.Document();
+  pdf.addPage(pw.Page(
+    build: (context) => pw.Column(children: [
+      pw.Container(
+          height: 100,
+          width: double.infinity,
+          decoration: pw.BoxDecoration(
+            color: PdfColors.blue,
+          ),
+          child: pw.Row(children: [
+            ...List.generate(
+              invoiceList.length,
+              (index) => pw.Row(children: [
+                pw.Text(
+                  invoiceList[index].name,
+                  style: pw.TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
+                pw.Text(
+                  invoiceList[index].price,
+                  style: pw.TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                pw.Text(
+                  invoiceList[index].brand,
+                  style: pw.TextStyle(
+                    fontSize: 20,
+                  ),
                 )
-              ]
+              ]),
             )
-          )
-        ]
-      ),
-    )
-  );
+          ]))
+    ]),
+  ));
   return pdf.save();
-
 }
-
