@@ -1,3 +1,4 @@
+import 'package:daytodaytask/Invoice_Generator/Invoice_page.dart';
 import 'package:daytodaytask/RegisterPage/registerPage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class DayToTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:RegisterPage(),
+      home:InvoicePage(),
     );
   }
 }
