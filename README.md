@@ -12,6 +12,7 @@
  <h2>5.What is Recursion ? With Example.</h2>
  <h3>The recursion process in C refers to the process in which the program repeats a certain section of code in a similar way. Thus, in the programming languages, when the program allows the user to call any function inside the very same function, </h3>
  <h2>6.What is Timer class with example ?</h2>
+
  <h3>In the world of Flutter, time is of the essence, and the Timer class is the cornerstone of managing time-related functions within your app. This class provides an abstract interface for implementing timers that can be set to trigger once or to repeat at regular intervals, </h3>
  <h2>7.What is Timer.periodic and use with Example?</h2>
  <h3>Periodic timers stay alive until they are manually canceled. Flutter has a different factory method, named periodic , to create such a timer. A good example of a periodic timer is displaying the remaining time for a time-sensitive operation, like completing a payment within 10 minutes. </h3>
@@ -21,6 +22,7 @@
 <img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/d7476736-0d1a-4e20-93c0-1e6cd70a52e7"height="20%" width="20%">
 https://github.com/sumitpatil21/Day_Task/assets/148967002/f7bbdfc4-72a8-4ee2-8608-a97c46685e3b
 <img src="https://github.com/sumitpatil21/Day_Task/assets/148967002/330344b6-65da-4fe6-9aff-93abd91a418c"height="20%" width="20%">
+<img src="https://github.com/user-attachments/assets/8511afe9-4eab-4111-a785-7ea2f2b443a8"height="20%" width="20%">
 <h3>Click Link For Vidoe</h3>
 <p>
 https://github.com/sumitpatil21/Day_Task/assets/148967002/dc160d03-c3b0-463a-8d1f-32be0d520b3b</p>
